@@ -13,6 +13,7 @@ html {
   flex-direction: column;
   justify-content: space-between;
   /*border: 2px dotted blue;*/
+  overflow: hidden;
 }
 
 /* Header */
@@ -48,12 +49,15 @@ header .content span:nth-child(2n+1) {
   font-weight: 400;
 }
 
-header nav ul {
+header nav {
   display: flex;
 }
 
-nav li {
-  padding-left: 1rem;
+nav button {
+  margin-left: 1rem;
+  border: none;
+  background-color: unset;
+  padding: unset;
 }
 
 nav a {
@@ -64,6 +68,34 @@ nav a {
 header .mobile {
   display: none;
 }
+
+@media only screen and (max-width: 575px) {
+  header .desktop {
+    display: none;
+  }
+  header .mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    border: 1px solid;
+    height: 2rem;
+  }
+  header .content {
+    justify-content: center;
+  }
+  header {
+    margin: 0 auto;
+  }
+  nav button {
+  margin: 0 auto;
+  border: 1px solid red;
+  }
+  nav button img {
+    vertical-align: middle;
+  }
+}
+
 
 /* Banner */
 #banner.content { /*van juntos, asi se llama el selector */
@@ -84,7 +116,8 @@ header .mobile {
 }
 
 .right.box {
-  max-width: 25rem;
+  max-width: 23rem;
+  margin-right: 1.5rem;
 }
 
 #banner h1 {
@@ -100,13 +133,93 @@ header .mobile {
   padding: 1.5rem 0;
 }
 
-.button {
+#banner button {
   font-size: 1rem;
   text-align: center;
   color: white;
   background-color: black;
   padding: 0.5rem 0;
-  max-width: 25rem;
+  width: 100%;
+  border: unset;
+}
+
+@media only screen and (max-width: 1020px) {
+  .right.box {
+    max-width:  19rem;
+    min-width: 15rem;
+  }
+  #banner h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  }
+  #banner h2 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+}
+@media only screen and (max-width: 775px) {
+  .right.box {
+    min-width: 14rem;
+  }
+  #banner h1 {
+  font-size: 2.2rem;
+  }
+  #banner h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .right.box {
+    min-width: 10rem;
+  }
+  #banner h1 {
+  font-size: 2rem;
+  }
+  #banner h2 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .right.box {
+    min-width: 9rem;
+  }
+  #banner h1 {
+  font-size: 1.8rem;
+   line-height: 1;
+  }
+  #banner h2 {
+    font-size: 1rem;
+     line-height: 1.2;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #banner .container {
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto 2rem auto;
+  }
+  #banner img {
+  max-width: 100%;
+  margin: 0;
+  }
+  .right.box {
+    margin-left: 1rem;
+    max-width: 100%;
+    /*min-width: 10rem;      */
+  }
+  #banner h1 {
+  font-size: 2.2rem;
+  line-height: 1.1;
+  margin: 2rem 0;
+  }
+  #banner h2 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  marging-bottom: 1.5rem;
+  }
 }
 
 /* Articles */
@@ -116,6 +229,7 @@ header .mobile {
   background-color: rgb(243 245 245); /* podria ser pseudo */
   /*border: 2px solid gold;*/
   margin: 2rem 0 2rem 1.5rem; /*queda*/
+
 }
 
 /* CONTAINER LEFT */
@@ -123,6 +237,7 @@ header .mobile {
 #article .container.left { /* van separados porque estan concadenados */
   /* display: block; */
   position: absolute;
+
 }
 
 #article img {
@@ -199,7 +314,6 @@ header .mobile {
   position: relative;
   top: -1rem; /* queda a la altura de la imagen*/
   /* right: 1rem; */ /* fit, fitting ( por SPEC, sigue siendo 40% de su parent, pero movido a la
-
 derecha) */
   left: 0.5rem;
 }
@@ -212,11 +326,14 @@ derecha) */
   /* align-items: flex-end; */
   /* flex-direction: column; */
   max-width: 40%;
+
+
 }
 
 #news {
   /* margin-left: 1.5rem; */
   /* padding-top: 1rem; */
+
 }
 
 #article a {
@@ -225,6 +342,7 @@ derecha) */
 
 #article #news {
   /* border-left: 1px solid darkgray; */
+
 }
 
 #news .article:nth-child(3n+0) {
@@ -234,6 +352,7 @@ derecha) */
 #article .article {
   display: flex;
   align-items: flex-start;
+
 }
 
 #article .container.right img {
@@ -249,6 +368,7 @@ derecha) */
 #article .container.right .info {
   max-width: 65%;
   margin: auto 5rem auto 0;
+
 }
 
 #article .container.right .title {
@@ -257,6 +377,7 @@ derecha) */
 
 #article .container.right .note {
   margin: 0.5rem 0;
+
 }
 
 #article #news .article.one {
