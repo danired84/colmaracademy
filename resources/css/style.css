@@ -118,6 +118,11 @@ header .mobile {
   margin-right: 1.5rem;
 }
 
+#banner button a {
+  color: white;
+  font-weight: bold;
+}
+
 #banner h1 {
   font-weight: 700;
   font-size: 3rem;
