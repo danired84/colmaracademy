@@ -8,10 +8,18 @@ html {
 
 .main-content {
   position: relative;
+  top: 64px;
   top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   overflow: hidden;
 }
 
@@ -24,16 +32,29 @@ header {
   background-color: white;
 }
 header .content { /* flex (parent) grow (child) */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 24px;
   margin: 0 1.5rem;
+  padding: 16px 0;
   padding: 1rem 0;
 }
 
 header .logo {
-  flex: 1; /* ( flex-grow ) */
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; /* ( flex-grow ) */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 32px;
   height: 2rem;
 }
 
@@ -48,10 +69,13 @@ header .content span:nth-child(2n+1) {
 }
 
 header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 nav button {
+  margin-left: 16px;
   margin-left: 1rem;
   border: none;
   background-color: unset;
@@ -59,6 +83,7 @@ nav button {
 }
 
 nav a {
+  font-size: 16px;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -72,14 +97,24 @@ header .mobile {
     display: none;
   }
   header .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     height: 2rem;
   }
   header .content {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   header {
     margin: 0 auto;
@@ -92,7 +127,6 @@ header .mobile {
   }
 }
 
-
 /* Banner */
 #banner.content {
   width: 100%;
@@ -100,43 +134,60 @@ header .mobile {
 }
 
 #banner .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 32px 0 32px 24px;
   margin: 2rem 0 2rem 1.5rem;
 }
 
 #banner img {
   max-width: 60%;
+  margin-right: 24px;
   margin-right: 1.5rem;
 }
 
 .right.box {
+  max-width: 368px;
   max-width: 23rem;
+  margin-right: 24px;
   margin-right: 1.5rem;
 }
 
 #banner h1 {
   font-weight: 700;
+  font-size: 48px;
   font-size: 3rem;
   line-height: 1.1;
 }
 
 #banner h2 {
+  font-size: 24px;
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.4;
+  padding: 24px 0;
   padding: 1.5rem 0;
 }
 
 #banner button {
+  font-size: 16px;
   font-size: 1rem;
   text-align: center;
   color: white;
   background-color: black;
+  padding: 8px 0;
   padding: 0.5rem 0;
   width: 100%;
   border: unset;
+  -webkit-transition: background-color 0.5s linear,
+    color 750ms ease-in 100ms;
   transition: background-color 0.5s linear,
     color 750ms ease-in 100ms;
 }
@@ -194,9 +245,17 @@ header .mobile {
 
 @media only screen and (max-width: 700px) { /* mobile version */
   #banner .container {
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+              -ms-grid-row-align: flex-start;
+          align-items: flex-start;
   margin: 0 auto 2rem auto;
   }
   #banner img {
@@ -231,6 +290,7 @@ header .mobile {
 #article.content {
   width: 100%;
   background-color: rgb(243, 245, 245);
+  margin: 32px 0 32px 24px;
   margin: 2rem 0 2rem 1.5rem;
 }
 
@@ -313,12 +373,23 @@ header .mobile {
 Please, let me know if there are another ways) ) */
 
 #article .container.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
+  top: -16px;
   top: -1rem; /* fit, fitting */
+  left: 8px;
   left: 0.5rem; /* I put this because if you put -1rem, show just beside the image and the frame. So 16px + 8px must be 24px (sum of horizontal spaces)
                     Please, let me know if there are another way, more accuracy */
 }
@@ -336,12 +407,17 @@ Please, let me know if there are another ways) ) */
 }
 
 #article .article {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 #article .container.right img {
   max-width: 35%;
+  margin: 16px;
   margin: 1rem;
 }
 
@@ -351,6 +427,7 @@ Please, let me know if there are another ways) ) */
 
 #article .container.right .info {
   max-width: 65%;
+  margin: auto 80px auto 0;
   margin: auto 5rem auto 0;
 }
 
@@ -359,6 +436,7 @@ Please, let me know if there are another ways) ) */
 }
 
 #article .container.right .note {
+  margin: 8px 0;
   margin: 0.5rem 0;
 }
 
@@ -396,7 +474,10 @@ Please, let me know if there are another ways) ) */
 @media only screen and (max-width: 700px) { /* mobile version */
   #article .container.right {
     position: relative;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
     top: 0;
     left: 0rem;
   }
@@ -575,7 +656,6 @@ Please, let me know if there are another ways) ) */
   .catalog.mobile li {
     margin-bottom: 0.5rem;
   }
-  .catalog.mobile
 }
 
 /* Video */
@@ -585,18 +665,22 @@ Please, let me know if there are another ways) ) */
 #video.content {
   width: 100%;
   position: relative;
+  margin: 32px 0 32px 24px;
   margin: 2rem 0 2rem 1.5rem;
 }
 
 #video .headline {
+  font-size: 40px;
   font-size: 2.5rem;
   font-weight: 600;
   text-align: center;
+  margin-bottom: 32px;
   margin-bottom: 2rem;
 }
 
 #video .container.left {
   position: absolute;
+  margin-right: 24px;
   margin-right:  1.5rem;
 }
 
@@ -608,36 +692,60 @@ Please, let me know if there are another ways) ) */
 
 #video .text-below {
   margin: unset;
+  margin: 24px 0 32px 0;
   margin: 1.5rem 0 2rem 0;
 }
 
 #video .text-below .text{
   margin: unset;
+  margin-top: 8px;
   margin-top: 0.5rem;
 }
 
 /* CONTAINER RIGHT - overlap the .container.left */
 
 #video .container.right {
+  margin-bottom: 168px;
   margin-bottom: 10.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
+  left: 8px;
   left: 0.5rem; /* fit, fitting */
 }
 
 #video .container.right .frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 40%;
 }
 
 #videos #news {
+  margin-left: 16px;
   margin-left: 1rem;
+  padding-top: 16px;
   padding-top: 1rem;
 }
 
@@ -646,17 +754,23 @@ Please, let me know if there are another ways) ) */
 }
 
 #video .article {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 #video .container.right img {
   max-width: 35%;
+  margin: 16px;
   margin: 1rem;
 }
 
 #video .container.right .info {
   width: 65%;
+  margin: auto 80px auto 0;
   margin: auto 5rem auto 0;
 }
 
@@ -665,6 +779,7 @@ Please, let me know if there are another ways) ) */
 }
 
 #video .container.right .note {
+  margin: 8px 0;
   margin: 0.5rem 0;
 }
 
