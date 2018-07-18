@@ -401,13 +401,11 @@ Please, let me know if there are another ways) ) */
     left: 0rem;
   }
   #article .container.right .frame {
-    border: 1px solid black;
     max-width: 100%;
   }
   #article .container.right .article {
     display: block;
     margin: 1rem 1rem 4rem 1rem;
-    border: 1px solid red;
     background-color: unset;
   }
   #article.content {
@@ -431,7 +429,8 @@ Please, let me know if there are another ways) ) */
     border-bottom: unset;
   }
   #article #news .article.three {
-    margin-bottom: unset
+    margin-bottom: unset;
+    padding-top: 1rem;
   }
 }
 @media only screen and (max-width: 300px) {
