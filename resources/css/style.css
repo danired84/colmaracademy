@@ -3,7 +3,7 @@
 html {
   font-family: "roboto", sans-serif;
   font-size: 16px;
-   background-color: rgb(243 245 245);
+  background-color: rgb(243, 245, 245);
 }
 
 .main-content {
@@ -12,7 +12,6 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /*border: 2px dotted blue;*/
   overflow: hidden;
 }
 
@@ -25,7 +24,7 @@ header {
   background-color: white;
       border: 1px solid green;
 }
-header .content { /* para aplicar flex, luego grow */
+header .content { /* flex (parent) grow (child) */
   display: flex;
   align-items: center;
   margin: 0 1.5rem;
@@ -33,7 +32,7 @@ header .content { /* para aplicar flex, luego grow */
 }
 
 header .logo {
-  flex: 1; /* es igual que flex-grow */
+  flex: 1; /* ( flex-grow ) */
   display: flex;
   align-items: center;
   height: 2rem;
@@ -69,7 +68,7 @@ header .mobile {
   display: none;
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 700px) { /* mobile version */
   header .desktop {
     display: none;
   }
@@ -89,21 +88,20 @@ header .mobile {
   }
   nav button {
   margin: 0 auto;
-  border: 1px solid red;
   }
   nav button img {
-    vertical-align: middle;
+    vertical-align: bottom;
   }
 }
 
 
 /* Banner */
-#banner.content { /*van juntos, asi se llama el selector */
+#banner.content {
   width: 100%;
-  background-color: lightgray; /* temporal insertar con pseudo */
+  background-color: lightgray;
 }
 
-#banner .container { /* van separados porque estan concadenados */
+#banner .container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -168,7 +166,6 @@ header .mobile {
     font-size: 1.3rem;
   }
 }
-
 @media only screen and (max-width: 720px) {
   .right.box {
     min-width: 10rem;
@@ -181,24 +178,11 @@ header .mobile {
   }
 }
 
-@media only screen and (max-width: 650px) {
-  .right.box {
-    min-width: 9rem;
-  }
-  #banner h1 {
-  font-size: 1.8rem;
-   line-height: 1;
-  }
-  #banner h2 {
-    font-size: 1rem;
-     line-height: 1.2;
-  }
-}
-
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 700px) { /* mobile version */
   #banner .container {
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   margin: 0 auto 2rem auto;
   }
   #banner img {
@@ -206,9 +190,9 @@ header .mobile {
   margin: 0;
   }
   .right.box {
+    margin-right: 1rem;;
     margin-left: 1rem;
     max-width: 100%;
-    /*min-width: 10rem;      */
   }
   #banner h1 {
   font-size: 2.2rem;
@@ -218,26 +202,28 @@ header .mobile {
   #banner h2 {
   font-size: 1.2rem;
   line-height: 1.4;
-  marging-bottom: 1.5rem;
+  padding: unset;
+  padding-bottom: 1.5rem;
+  }
+  #banner button {
+    font-weight: bolder;
+    background-color: gray;
+    margin-right: 1rem;
   }
 }
 
 /* Articles */
 
-#article.content { /*van juntos, asi se llama el selector */
+#article.content {
   width: 100%;
-  background-color: rgb(243 245 245); /* podria ser pseudo */
-  /*border: 2px solid gold;*/
-  margin: 2rem 0 2rem 1.5rem; /*queda*/
-
+  background-color: rgb(243, 245, 245);
+  margin: 2rem 0 2rem 1.5rem;
 }
 
 /* CONTAINER LEFT */
 
-#article .container.left { /* van separados porque estan concadenados */
-  /* display: block; */
+#article .container.left {
   position: absolute;
-
 }
 
 #article img {
@@ -247,7 +233,7 @@ header .mobile {
 .text-below {
   position: relative;
   top: -0.2rem; /* fit, fitting */
-  max-width: 58%;
+  max-width: 60%;
   margin: 2rem 0;
   margin:  2rem 0 0 0;
   position:relative;
@@ -265,10 +251,8 @@ header .mobile {
 }
 
 .text-below .author {
-    font-size: 0.8rem;
-    margin-top: 2.5rem; /* fit, fitting */
-    /* position:relative; */
-    /* z-index: 50; */
+  font-size: 0.9rem;
+  margin-top: 2.5rem; /* fit, fitting */
 }
 
 @media only screen and (max-width: 1400px) {
@@ -276,89 +260,74 @@ header .mobile {
     font-size: 1.8rem;
   }
   .text-below .text {
-    font-size: 0.9rem;
-  }
-  .text-below .author {
-    margin-top: 3.25rem; /* fit, fitting */
-  }
-
-}
-
-@media only screen and (max-width: 1280px) {
-    .text-below {
-     max-width: 60%;
-  }
-    .text-below .title {
-    font-size: 1.7rem;
-  }
-   .text-below .text {
+    font-size: 1rem;
     line-height: 1rem;
   }
   .text-below .author {
-    margin-top: 1.50rem; /* fit, fitting */
-    font-size: 0.75rem;
+    margin-top: 2rem;
   }
-
 }
 
+@media only screen and (max-width: 1280px) {
+  .text-below {
+    max-width: 60%;
+  }
+  .text-below .title {
+    font-size: 1.6rem;
+  }
+}
 
-/* CONTAINER RIGHT - este contenedor se superpone al izquierdo*/
+@media only screen and (max-width: 1010px) {
+  .text-below .title {
+    font-size: 1.7rem;
+  }
+  .text-below .text {
+    font-size: 0.85rem;
+  }
+  .text-below .author {
+    margin-top: 1rem; /* fit, fitting */
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 700px) { /* mobile version */
+  #article .container.left {
+    display: none;
+  }
+}
+
+/* CONTAINER RIGHT - (overlap .container.left - I need get set a 60% image and a 40% articles frame, in the same section.
+Please, let me know if there are another ways) ) */
 
 #article .container.right {
-  /* margin-left: -1rem; */
-  /* margin-left: 0.5rem; */
   display: flex;
   justify-content: center;
   align-items: flex-end;
   flex-direction: column;
   position: relative;
-  top: -1rem; /* queda a la altura de la imagen*/
-  /* right: 1rem; */ /* fit, fitting ( por SPEC, sigue siendo 40% de su parent, pero movido a la
-derecha) */
-  left: 0.5rem;
+  top: -1rem; /* fit, fitting */
+  left: 0.5rem; /* fit, fitting */
 }
 
 #article .container.right .frame {
-  /* margin-left: 1rem; */
-  /* border: 1px solid black; */
-  /* display: flex; */
-  /* justify-content: flex-end; */
-  /* align-items: flex-end; */
-  /* flex-direction: column; */
   max-width: 40%;
-
-
-}
-
-#news {
-  /* margin-left: 1.5rem; */
-  /* padding-top: 1rem; */
-
 }
 
 #article a {
   color: blue;
 }
 
-#article #news {
-  /* border-left: 1px solid darkgray; */
-
-}
-
-#news .article:nth-child(3n+0) {
+#news article:nth-child(3n+0) {
   background-color: lightgray;
 }
 
 #article .article {
   display: flex;
   align-items: flex-start;
-
 }
 
 #article .container.right img {
   max-width: 35%;
   margin: 1rem;
-  /* margin: 0 1rem 1rem 1rem; */
 }
 
 #article img.mobile {
@@ -368,7 +337,6 @@ derecha) */
 #article .container.right .info {
   max-width: 65%;
   margin: auto 5rem auto 0;
-
 }
 
 #article .container.right .title {
@@ -377,21 +345,91 @@ derecha) */
 
 #article .container.right .note {
   margin: 0.5rem 0;
-
 }
 
 #article #news .article.one {
   border-bottom: 1px solid darkgray;
 }
 
+@media only screen and (max-width: 1400px) {
+  #article .container.right {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  #article .container.right {
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+  #article .info {
+    margin: auto 3rem auto 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #article .container.right .info  {
+    max-width: 65%;
+    margin: 1rem 3rem 1rem 0;
+    font-size: 0.9rem;
+  }
+  #article .container.right {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 700px) { /* mobile version */
+  #article .container.right {
+    position: relative;
+    align-items: center;
+    top: 0;
+    left: 0rem;
+  }
+  #article .container.right .frame {
+    border: 1px solid black;
+    max-width: 100%;
+  }
+  #article .container.right .article {
+    display: block;
+    margin: 1rem 1rem 4rem 1rem;
+    border: 1px solid red;
+    background-color: unset;
+  }
+  #article.content {
+    margin: 0;
+  }
+  #article .container.right .article .desktop {
+    display: none;
+  }
+  #article .container.right .article .mobile {
+    display: block;
+    max-width: 100%;
+    margin: unset;
+  }
+  #article .container.right .info  {
+    margin: 1rem 1rem 3rem 1rem;
+    font-size: 1rem;
+    max-width: 100%;
+    margin-bottom: unset;
+  }
+  #article #news .article.one {
+    border-bottom: unset;
+  }
+  #article #news .article.three {
+    margin-bottom: unset
+  }
+}
+@media only screen and (max-width: 300px) {
+  #article .container.right .info  {
+    font-size: 0.9rem;
+  }
+}
 
 /* Courses */
 
-#courses { /*van juntos, asi se llama el selector */
-  /* position: relative; */ /**/
-  /* top: 0rem; */ /**/
+#courses {
   width: 100%;
-  background-color: lightgray; /* temporal insertar con pseudo */
+  background-color: lightgray;
   padding: 2rem 0 1rem 0;
 }
 
@@ -406,28 +444,29 @@ derecha) */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 0 3.5rem; /* sum of horizontal margin, item*/
+  margin: 0 3.5rem; /* sum of horizontal margin, 56px + 16px= 72px */
 }
 
-.item {
+.catalog.mobile {
+  display: none;
+}
+
+#courses .item {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  max-width: 28.2rem;
+  max-width: 28.5rem;
   height:  auto;
   overflow: hidden;
   background-color: white;
-}
-
-#courses .item {
-  margin: 1rem;
+  margin: 1rem;   /* I supposed setting 16px + 16px= 32px, (sum of horizontal margin) but it is not exact what I want
+                  Please let me know if there are another chances, more accuracy. */
 }
 
 #courses img {
-
   max-width: 100%;
-  height: auto; /*por las*/
+  height: auto; /* it is not necessary?? */
 }
 
 #courses .text {
@@ -454,22 +493,77 @@ derecha) */
   #courses .text {
     width: 68%;
   }
-  .item {
+  #courses .item {
     max-width: 20rem;/**/
   }
   #courses img {
     max-width: 100%;
   }
-
 }
-
 @media only screen and (max-width: 1280px) {
   #courses {
-    top: -1.95rem; /**/
+    top: -1.95rem;                              /**/
   }
-
 }
-
+@media only screen and (max-width: 1185px) {
+  #courses .item {
+    max-width: 18rem;/**/
+  }
+}
+@media only screen and (max-width: 1090px) {
+  #courses .item {
+    max-width: 16rem;/**/
+  }
+}
+@media only screen and (max-width: 995px) {
+  #courses .item {
+    max-width: 15rem;/**/
+  }
+}
+@media only screen and (max-width: 950px) {
+  #courses .item {
+    max-width: 14rem;/**/
+  }
+}
+@media only screen and (max-width: 900px) {
+  #courses .item {
+    max-width: 20rem;/**/
+  }
+}
+@media only screen and (max-width: 835px) {
+  #courses .item {
+    max-width: 18rem;/**/
+  }
+}
+@media only screen and (max-width: 770px) {
+  #courses .item {
+    max-width: 16rem;/**/
+  }
+}
+@media only screen and (max-width: 700px){ /* mobile version */
+  .catalog.desktop {
+    display: none;
+  }
+  .catalog.mobile {
+    display: block;
+        border: 1px solid gold;
+  }
+  #courses {
+    padding: unset;
+    padding: 2rem 0 0.5rem 0;
+    background-color: unset;
+        border: 1px solid blue;
+  }
+  .catalog.mobile h3{
+    font-weight: bold;
+    background-color: lightgray;
+    border-radius: 4px;
+    padding: 1rem 0 1.5rem 1rem;
+  }
+  .catalog.mobile li {
+    margin-bottom: 0.5rem;
+  }
+}
 
 /* Video */
 
@@ -478,8 +572,6 @@ derecha) */
 #video.content {
   width: 100%;
   position: relative;
-  /* top: 0rem; */ /* fit, fitting */
-  /*margin: 2rem 0;*/
   margin: 2rem 0 2rem 1.5rem;
 }
 
@@ -488,20 +580,14 @@ derecha) */
   font-weight: 600;
   text-align: center;
   margin-bottom: 2rem;
-  /*margin-top: 2rem;*/
 }
 
-#video .container.left { /* van separados porque estan concadenados */
-  /*argin-top: 2rem;*/
-  /* display:  none; */
-  /* display:  block; */
+#video .container.left {
   position: absolute;
   margin-right:  1.5rem;
-  /*border: 2px solid red;*/
 }
 
 #video .thesis {
-  /* display: none; */
   max-width: 60%;
   position: relative;
   z-index: 50;
@@ -510,26 +596,21 @@ derecha) */
 #video .text-below {
   margin: unset;
   margin: 1.5rem 0 2rem 0;
-  /*border: 2px solid aqua;*/
 }
 
 #video .text-below .text{
   margin: unset;
   margin-top: 0.5rem;
-  /*margin-bottom: 2rem;*/
-  /*border: 2px solid gray;*/
 }
 
-/* CONTAINER RIGHT - este contenedor se superpone al izquierdo*/
+/* CONTAINER RIGHT - overlap the .container.left */
 
 #video .container.right {
   margin-bottom: 10.5rem;
-  /* display:  none; */
   display: flex;
   justify-content: center;
   align-items: flex-end;
   flex-direction: column;
-  /* margin-left: 1.5rem; */
   position: relative;
   left: 0.5rem; /* fit, fitting */
 }
@@ -547,7 +628,7 @@ derecha) */
   padding-top: 1rem;
 }
 
-#video #news .article:nth-child(odd) {
+#video #news article:nth-child(odd) {
   background-color: lightgray;
 }
 
@@ -574,6 +655,32 @@ derecha) */
   margin: 0.5rem 0;
 }
 
+@media only screen and (max-width: 700px){
+  #video.content {
+    margin: 2rem 0 1.5rem 0;
+  }
+  #video .container.left {
+    display: block;
+    position: unset;
+    margin: 0;
+    border: 2px solid red;
+    overflow: hidden;
+}
+  #video .headline {
+    margin-bottom: 1rem;
+  }
+  #video .text-below {
+    display: none;
+  }
+  #video .thesis {
+    max-width: 100%;
+    position: relative;
+        border: 1px solid gold;
+  }
+  #video .container.right {
+    display: none;
+  }
+}
 
 /* footer */
 
@@ -585,7 +692,7 @@ footer {
   display: flex;
   justify-content: flex-start;
   padding-bottom: 4rem;
-  /*border: 2px solid gold;*/
+  border: 2px solid green;
 }
 
 footer span {
@@ -603,15 +710,22 @@ footer a {
 
 @media only screen and (max-width: 1400px) {
   footer {
-    top: 13.35rem;/* fit, fitting */
-  }
-}
-
-@media only screen and (max-width: 1400px) {
-  footer {
     top: 13rem;/* fit, fitting */
     padding-bottom: 2.5rem;
     font-size: 0.9rem;
   }
+}
 
+@media only screen and (max-width: 700px) { /* mobile version */
+  footer {
+    top: 2.4rem;/* fit, fitting */
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+  footer span {
+    margin-top: unset;
+  }
+  footer a {
+    display: none;
+  }
 }
