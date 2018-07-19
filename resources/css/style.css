@@ -130,7 +130,7 @@ header .mobile {
 /* Banner */
 #banner.content {
   width: 100%;
-  background-color: lightgray;
+  background-color: rgb(152, 152, 152); /**/
 }
 
 #banner .container {
@@ -178,7 +178,7 @@ header .mobile {
 
 #banner button {
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 1.7rem; /**/
   text-align: center;
   color: white;
   background-color: black;
@@ -289,7 +289,6 @@ header .mobile {
 
 #article.content {
   width: 100%;
-  background-color: rgb(243, 245, 245);
   margin: 32px 0 32px 24px;
   margin: 2rem 0 2rem 1.5rem;
 }
@@ -406,6 +405,15 @@ Please, let me know if there are another ways) ) */
   background-color: lightgray;
 }
 
+#news .article.three .featured {/**/
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: bold;
+  background-color: lightcyan;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.4rem; /**/
+}
+
 #article .article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -413,6 +421,12 @@ Please, let me know if there are another ways) ) */
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  transition: background-color 0.3s linear; /**/
+}
+
+#article .article:hover { /**/
+  background-color: rgb(152, 152, 152);
+  font-weight: bold;
 }
 
 #article .container.right img {
@@ -432,6 +446,7 @@ Please, let me know if there are another ways) ) */
 }
 
 #article .container.right .title {
+  font-size: 1.1rem; /**/
   font-weight: bolder;
 }
 
@@ -513,6 +528,10 @@ Please, let me know if there are another ways) ) */
     margin-bottom: unset;
     padding-top: 1rem;
   }
+  #news .article.three .featured {/**/
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  }
 }
 @media only screen and (max-width: 300px) {
   #article .container.right .info  {
@@ -524,15 +543,16 @@ Please, let me know if there are another ways) ) */
 
 #courses {
   width: 100%;
-  background-color: lightgray;
+  background-color: rgb(0, 116, 116); /**/
   padding: 2rem 0 1rem 0;
 }
 
 #courses .headline {
-  font-size: 2.5rem;
+  font-size: 2.8rem; /**/
   font-weight: 600;
   text-align: center;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .catalog {
@@ -551,12 +571,20 @@ Please, let me know if there are another ways) ) */
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  max-width: 28.5rem;
+  max-width: 28rem;
   height:  auto;
   overflow: hidden;
   background-color: white;
   margin: 1rem;   /* I supposed setting 16px + 16px= 32px, (sum of horizontal margin) but it is not exact what I want
                   Please let me know if there are another chances, more accuracy. */
+  transition: background-color 0.4s linear, /**/
+    color 0.4s ease-in 100ms;
+
+}
+
+#courses .item:hover {
+  background-color: gold;
+  color: blue;
 }
 
 #courses img {
@@ -645,13 +673,24 @@ Please, let me know if there are another ways) ) */
   #courses {
     padding: unset;
     padding: 2rem 0 1.5rem 0; /* sum of spaces, 32px= 24px+8px*/
-    background-color: unset;
+    background-color: rgb(0, 116, 116); /**/
   }
+  #courses .headline { /**/
+    font-size: 2.5rem;
+  }
+
   .catalog.mobile h3{
+    font-size: 1.4rem; /**/
     font-weight: bold;
     background-color: lightgray;
-    border-radius: 4px;
+    border-radius: 0.4rem; /**/
     padding: 1rem 0 1.5rem 1rem;
+    transition: background-color 0.4s linear, /**/
+    color 0.4s ease-in 100ms;
+  }
+  .catalog.mobile h3:hover { /**/
+    background-color: gold;
+    color: blue;
   }
   .catalog.mobile li {
     margin-bottom: 0.5rem;
@@ -750,7 +789,7 @@ Please, let me know if there are another ways) ) */
 }
 
 #video #news article:nth-child(odd) {
-  background-color: lightgray;
+  background-color: lightgray ;
 }
 
 #video .article {
@@ -760,6 +799,12 @@ Please, let me know if there are another ways) ) */
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  transition: background-color 0.3s linear; /**/
+}
+
+#video .article:hover { /**/
+  background-color: rgb(152, 152, 152);
+  font-weight: bold;
 }
 
 #video .container.right img {
@@ -775,6 +820,7 @@ Please, let me know if there are another ways) ) */
 }
 
 #video .container.right .title {
+  font-size: 1.1rem;   /**/
   font-weight: bolder;
 }
 
