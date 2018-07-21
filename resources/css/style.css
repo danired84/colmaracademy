@@ -903,26 +903,3 @@ footer a {
     display: none;
   }
 }
-
-.contentcontainer {
-  position: fixed;
-  z-index: 300;
-  width: 100%;
-  background-color: darkgreen;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.itempru {
-  width: 100px;
-  height: 100px;
-  background-color: gold;
-  border: 0.25rem dotted white;
-}
-.itempru2 {
-  width: 25px;
-  height: 25px;
-  background-color: gold;
-  border: 0.25rem dotted white;
-}
