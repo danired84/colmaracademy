@@ -92,7 +92,7 @@ header .mobile {
   display: none;
 }
 
-@media only screen and (max-width: 900px) { /* mobile version */
+@media only screen and (max-width: 700px) { /* mobile version */
   header .desktop {
     display: none;
   }
@@ -220,7 +220,7 @@ header .mobile {
     line-height: 1.4;
   }
 }
-/*@media only screen and (max-width: 775px) {
+@media only screen and (max-width: 775px) {
   .right.box {
     min-width: 14rem;
   }
@@ -241,9 +241,9 @@ header .mobile {
   #banner h2 {
     font-size: 1rem;
   }
-}*/
+}
 
-@media only screen and (max-width: 900px) { /* mobile version */
+@media only screen and (max-width: 700px) { /* mobile version */
   #banner .container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -362,7 +362,7 @@ header .mobile {
     font-size: 0.8rem;
   }
 }
-@media only screen and (max-width: 900px) { /* mobile version */
+@media only screen and (max-width: 700px) { /* mobile version */
   #article .container.left {
     display: none;
   }
@@ -475,7 +475,7 @@ Please, let me know if there are another ways) ) */
   }
 }
 
-/*@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   #article .container.right .info  {
     max-width: 65%;
     margin: 1rem 3rem 1rem 0;
@@ -484,9 +484,9 @@ Please, let me know if there are another ways) ) */
   #article .container.right {
     margin-bottom: 2rem;
   }
-}*/
+}
 
-@media only screen and (max-width: 900px) { /* mobile version */
+@media only screen and (max-width: 700px) { /* mobile version */
   #article .container.right {
     position: relative;
     -webkit-box-align: center;
@@ -648,22 +648,22 @@ Please, let me know if there are another ways) ) */
     max-width: 14rem;/**/
   }
 }
-/*@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   #courses .item {
-    max-width: 20rem;
+    max-width: 20rem;/**/
   }
 }
 @media only screen and (max-width: 835px) {
   #courses .item {
-    max-width: 18rem;
+    max-width: 18rem;/**/
   }
 }
 @media only screen and (max-width: 770px) {
   #courses .item {
     max-width: 16rem;/**/
   }
-}*/
-@media only screen and (max-width: 900px){ /* mobile version */
+}
+@media only screen and (max-width: 700px){ /* mobile version */
   .catalog.desktop {
     display: none;
   }
@@ -829,7 +829,7 @@ Please, let me know if there are another ways) ) */
   margin: 0.5rem 0;
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 700px){
   #video.content {
     margin: 2rem 0 1.5rem 0;
   }
@@ -889,10 +889,10 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 900px) { /* mobile version */
+@media only screen and (max-width: 700px) { /* mobile version */
   footer {
     top: 2.4rem;/* fit, fitting */
-    padding: 1rem 0;|
+    padding: 1rem 0;
     font-size: 0.9rem;
   }
   footer span {
