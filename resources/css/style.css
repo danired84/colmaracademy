@@ -904,7 +904,7 @@ footer a {
   }
 }
 
-/* medidor de pantalla
+ medidor de pantalla
 .contentcontainer {
   position: fixed;
   z-index: 300;
@@ -921,47 +921,9 @@ footer a {
   background-color: gold;
   border: 0.25rem dotted white;
 }
-
-          <div class="contentcontainer">
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-            <div class="itempru">
-            </div>
-          </div>
-*/
+.itempru2 {
+  width: 25px;
+  height: 25px;
+  background-color: gold;
+  border: 0.25rem dotted white;
+}
